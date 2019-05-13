@@ -1,10 +1,12 @@
 #include <iostream>
-#include "spalatorie.h"
+#include "program.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+   Program* prog = new Program;
+   prog->init;
+   prog->afiseazaComenzile();
+   delete prog;
 }
