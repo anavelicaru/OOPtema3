@@ -1,17 +1,16 @@
 #ifndef HAINA_H_INCLUDED
 #define HAINA_H_INCLUDED
-
+#include <iostream>
 class Haina{
+    //culoare, greutate si cui apartine
 public:
-    virtual float getGreutate() = 0;
-    virtual bool getTip() = 0;
-    virtual bool getCuloare() = 0;
-    virtual bool getTemperatura() = 0;
-private:
+    istream& operator >> (istream& is, Haina h);
+protected:
     float greutate;
+    bool culoare; //0-deschis, 1-inchis
     bool tipHaina; //usoara sau grea: 0->usoara, 1->grea
-    bool culoareHaina; //inchisa sau deschisa: 0->deschisa, 1->inchisa
     bool temperatura;//scazuta sau ridicata: 0->scazuta, 1->ridicata
+    int idHaina;
 };
 
 
